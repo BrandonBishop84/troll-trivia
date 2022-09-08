@@ -36,6 +36,7 @@ function renderOne() {
 	button1.innerText = '1. a fish';
 	button2.innerText = '2. a fork';
 	button3.innerText = '3. a coin';
+	scoreEl.innerText = 'Score: 0/3';
 	button1.addEventListener('click', function () {
 		button1.innerText = 'Try again!';
 	});
@@ -54,6 +55,7 @@ function renderTwo() {
 	button1.innerText = '1. a carriage';
 	button2.innerText = '2. an egg';
 	button3.innerText = '3. a dragon';
+	scoreEl.innerText = 'Score: 1/3';
 	button1.addEventListener('click', function () {
 		button1.innerText = 'Try again!';
 	});
@@ -74,6 +76,7 @@ function renderThree() {
 	button1.innerText = '1. an ork';
 	button2.innerText = '2. a towel';
 	button3.innerText = '3. an umbrella';
+	scoreEl.innerText = 'Score: 2/3';
 	button1.addEventListener('click', function () {
 		button1.innerText = 'Try again!';
 	});
@@ -82,9 +85,14 @@ function renderThree() {
 			alert(
 				'You have chosen wisely! You shall cross thy bridge with permission!'
 			);
-		renderThree();
+		scoreEl.innerText = 'Score: 3/3';
+		init();
 	});
 	button3.addEventListener('click', function () {
 		button3.innerText = 'Try again!';
 	});
 }
+function init() {
+return alert("'Halt!!!! who goes there??? you want to cross my bridge do you?? If you wish to pass then riddles I shall ask'");
+}
+renderOne()

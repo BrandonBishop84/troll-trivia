@@ -13,7 +13,7 @@ I want to make a trivia game with riddles as the questions. I am going to have 3
 
 \*MVP Goals
 
--make functions that work
+-make functions 
 -Make creative and appealing UI.(decent looking)
 -Make a scoreboard
 -Have a visual of a bridge and troll
