@@ -1,8 +1,25 @@
 body {
+	max-width: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background: green;
 }
 header {
 	text-align: center;
 }
+div p {
+	align-items: left;
+	text-align: left;
+}
+
 main p {
 	text-align: right;
+	align-items: right;
+	display: flex;
+	flex-direction: column;
+	padding-left: 28rem;
+}
+.riddle {
+	color: red;
 }
