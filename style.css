@@ -3,7 +3,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	background: green;
 }
 header {
 	text-align: center;
@@ -13,7 +12,7 @@ div p {
 	text-align: left;
 }
 
-main p {
+main div {
 	text-align: right;
 	align-items: right;
 	display: flex;
@@ -22,4 +21,12 @@ main p {
 }
 .riddle {
 	color: red;
+}
+div button {
+	color: blue;
+	display: flex;
+	align-items: ;
+}
+h3 {
+	text-align: left;
 }
