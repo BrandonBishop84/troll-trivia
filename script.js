@@ -13,9 +13,6 @@ const riddle3 = 'Riddle 3: "What gets wet as it dries?"';
 const scoreEl = document.getElementById('score');
 const riddleEl = document.querySelector('#riddle');
 
-button1.addEventListener('click', function () {
-	button1.innerText = 'Try again!';
-});
 /*----- cached element references 
 need to have questions appear after completing others
 -----*/
@@ -45,8 +42,8 @@ function renderOne() {
 		button2.innerText = 'Try again!';
 	});
 	button3.addEventListener('click', function () {
-		(button3.innerText = 'Correct!!!'),
-			alert('"You got the 1st riddle! but you must answer thrice!"');
+		button3.innerText = 'Correct!!!';
+		alert('"You got the 1st riddle! but you must answer thrice!"');
 		renderTwo();
 	});
 }
@@ -61,10 +58,10 @@ function renderTwo() {
 		button1.innerText = 'Try again!';
 	});
 	button2.addEventListener('click', function () {
-		(button2.innerText = 'Correct!!!'),
-			alert(
-				'"You got the 2nd riddle! You must one get the last if you wish to pass!"'
-			);
+		button2.innerText = 'Correct!!!';
+		alert(
+			'"You got the 2nd riddle! You must one get the last if you wish to pass!"'
+		);
 		renderThree();
 	});
 	button3.addEventListener('click', function () {
@@ -74,18 +71,18 @@ function renderTwo() {
 
 function renderThree() {
 	riddleEl.innerText = riddle3;
-	button1.innerText = '1. an ork';
-	button2.innerText = '2. a towel';
+	button1.innerText = '1. a towel';
+	button2.innerText = '2. an ork';
 	button3.innerText = '3. an umbrella';
 	scoreEl.innerText = 'Score: 2/3';
 	button1.addEventListener('click', function () {
-		button1.innerText = 'Try again!';
+		button2.innerText = 'Try again!';
 	});
-	button2.addEventListener('click', function () {
-		(button2.innerText = 'Correct!!!'),
-			alert(
-				'"You have chosen wisely! You shall cross thy bridge with permission!"'
-			);
+	button1.addEventListener('click', function () {
+		button1.innerText = 'Correct!!!';
+		alert(
+			'"You have chosen wisely! You shall cross thy bridge with permission!"'
+		);
 		scoreEl.innerText = 'Score: 3/3';
 		init();
 	});
@@ -94,8 +91,10 @@ function renderThree() {
 	});
 }
 function init() {
-	return alert(
-		'"Halt!!!! who goes there??? you want to cross my bridge do you?? If you wish to pass then riddles I shall ask"',
+	return (
+		alert(
+			'"Halt!!!! who goes there??? you want to cross my bridge do you?? If you wish to pass then riddles I shall ask"'
+		),
 		renderOne()
 	);
 }
