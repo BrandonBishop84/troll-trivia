@@ -6,9 +6,10 @@ const buttons = document.getElementById('buttons');
 const button1 = document.getElementById('button1');
 const button2 = document.getElementById('button2');
 const button3 = document.getElementById('button3');
-const riddle1 = 'What has a head, a tail, is silver, and has no legs?';
-const riddle2 = 'What is more valuable when broken?';
-const riddle3 = 'What gets wet as it dries?';
+const riddle1 =
+	'Riddle 1: "What has a head, a tail, is silver, and has no legs?"';
+const riddle2 = 'Riddle 2: "What is more valuable when broken?"';
+const riddle3 = 'Riddle 3: "What gets wet as it dries?"';
 const scoreEl = document.getElementById('score');
 const riddleEl = document.querySelector('#riddle');
 
@@ -45,7 +46,7 @@ function renderOne() {
 	});
 	button3.addEventListener('click', function () {
 		(button3.innerText = 'Correct!!!'),
-			alert('You got the 1st riddle! but you must answer thrice!');
+			alert('"You got the 1st riddle! but you must answer thrice!"');
 		renderTwo();
 	});
 }
@@ -62,7 +63,7 @@ function renderTwo() {
 	button2.addEventListener('click', function () {
 		(button2.innerText = 'Correct!!!'),
 			alert(
-				'You got the 2nd riddle! You must one get the last if you wish to pass!'
+				'"You got the 2nd riddle! You must one get the last if you wish to pass!"'
 			);
 		renderThree();
 	});
@@ -83,7 +84,7 @@ function renderThree() {
 	button2.addEventListener('click', function () {
 		(button2.innerText = 'Correct!!!'),
 			alert(
-				'You have chosen wisely! You shall cross thy bridge with permission!'
+				'"You have chosen wisely! You shall cross thy bridge with permission!"'
 			);
 		scoreEl.innerText = 'Score: 3/3';
 		init();
@@ -93,6 +94,9 @@ function renderThree() {
 	});
 }
 function init() {
-return alert("'Halt!!!! who goes there??? you want to cross my bridge do you?? If you wish to pass then riddles I shall ask'");
+	return alert(
+		'"Halt!!!! who goes there??? you want to cross my bridge do you?? If you wish to pass then riddles I shall ask"',
+		renderOne()
+	);
 }
-renderOne()
+init();
