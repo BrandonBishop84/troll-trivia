@@ -11,15 +11,19 @@ header {
 	text-align: center;
 	font-family: 'Charm', sans-serif;
 	font-size: 25px;
+	margin-top: -2rem;
 }
 
 main #buttons {
 	display: flex;
 	flex-direction: column;
 	padding-left: 35rem;
-	padding-top: 14rem;
+	padding-bottom: 3rem;
 	position: absolute;
 	bottom: 30px;
+	text-align: center;
+	font-family: "charm";
+	
 }
 
 div button {
@@ -29,8 +33,10 @@ div button {
 	display: flex;
 }
 h3 {
-	text-align: center;
+	text-align: right;
 	font-size: 30px;
+	padding: 30rem 5rem;
+
 }
 
 footer {
@@ -48,4 +54,15 @@ main p {
 	position: absolute;
 	width: 300px;
 	bottom: 50px;
+}
+#text {	
+	padding-left: 5rem;
+	
+
+}
+#r {
+	margin-bottom: -2rem;
+}
+#buttons p {
+	margin-bottom: 0rem;
 }
