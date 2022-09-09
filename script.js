@@ -28,6 +28,52 @@ function for question area to switch to new questions.
 answer area to have function for answer selected.
 function to have score adjusted as progress.
 */
+button1.addEventListener('click', button0ne);
+button2.addEventListener('click', buttonTwo);
+button3.addEventListener('click', buttonThree);
+
+function button0ne() {
+	if (renderOne) {
+		return (button1.innerText = 'Try again');
+	} else if (renderTwo) {
+		return (button1.innerText = 'Try again');
+	} else renderThree;
+	return (
+		(button1.innerText = 'Correct!!!'),
+		alert(
+			'"You have chosen wisely! You shall cross thy bridge with permission!"'
+		),
+		(scoreEl.innerText = 'Score: 3/3'),
+		init()
+	);
+}
+
+function buttonTwo() {
+	if (renderOne) {
+		return (button2.innerText = 'Try again!');
+	} else if (renderTwo) {
+		return (
+			(button2.innerText = 'Correct!!!'),
+			alert(
+				'"You got the 2nd riddle! You must one get the last if you wish to pass!"'
+			) + renderThree()
+		);
+	} else renderThree;
+	return (button2.innerText = 'Try again!');
+}
+
+function buttonThree() {
+	if (renderOne) {
+		return (
+			(button3.innerText = 'Correct!!!'),
+			alert('"You got the 1st riddle! but you must answer thrice!"') +
+				renderTwo()
+		);
+	} else if (renderTwo) {
+		return (button3.innerText = 'Try again!');
+	} else renderThree;
+	return (button3.innerText = 'Try again!');
+}
 
 function renderOne() {
 	riddleEl.innerText = riddle1;
@@ -35,7 +81,9 @@ function renderOne() {
 	button2.innerText = '2. a fork';
 	button3.innerText = '3. a coin';
 	scoreEl.innerText = 'Score: 0/3';
-	button1.addEventListener('click', function () {
+}
+
+/*button1.addEventListener('click', function () {
 		button1.innerText = 'Try again!';
 	});
 	button2.addEventListener('click', function () {
@@ -46,7 +94,7 @@ function renderOne() {
 		alert('"You got the 1st riddle! but you must answer thrice!"');
 		renderTwo();
 	});
-}
+}*/
 
 function renderTwo() {
 	riddleEl.innerText = riddle2;
@@ -54,7 +102,8 @@ function renderTwo() {
 	button2.innerText = '2. an egg';
 	button3.innerText = '3. a dragon';
 	scoreEl.innerText = 'Score: 1/3';
-	button1.addEventListener('click', function () {
+}
+/*button1.addEventListener('click', function () {
 		button1.innerText = 'Try again!';
 	});
 	button2.addEventListener('click', function () {
@@ -64,18 +113,20 @@ function renderTwo() {
 		);
 		renderThree();
 	});
+	button3.removeEventListener();
 	button3.addEventListener('click', function () {
 		button3.innerText = 'Try again!';
 	});
 }
-
+*/
 function renderThree() {
 	riddleEl.innerText = riddle3;
 	button1.innerText = '1. a towel';
 	button2.innerText = '2. an ork';
 	button3.innerText = '3. an umbrella';
 	scoreEl.innerText = 'Score: 2/3';
-	button1.addEventListener('click', function () {
+}
+/*button2.addEventListener('click', function () {
 		button2.innerText = 'Try again!';
 	});
 	button1.addEventListener('click', function () {
@@ -89,7 +140,7 @@ function renderThree() {
 	button3.addEventListener('click', function () {
 		button3.innerText = 'Try again!';
 	});
-}
+}*/
 function init() {
 	return (
 		alert(

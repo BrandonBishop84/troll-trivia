@@ -5,7 +5,7 @@ body {
 	font-family: 'Charm', sans-serif;
 	background: url('oy9VHqg.jpg') no-repeat center center fixed;
 	background-size: cover;
-	height: 75%;
+	height: 90%;
 	overflow: hidden;
 }
 header {
@@ -33,16 +33,14 @@ div button {
 	display: flex;
 }
 h3 {
-	text-align: right;
 	font-size: 30px;
-	padding: 30rem 5rem;
+	position: absolute;
+	padding-top: 12rem;
+	padding-left: 2.5rem;
+	text-align: center;
 }
 
-footer {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
+
 main p {
 	font-size: 30px;
 }
