@@ -1,6 +1,9 @@
 /*----- constants -----/
 riddle trivia area / answer box/ riddles
 */
+let num = 0;
+let round = num;
+
 const buttons = document.getElementById('buttons');
 
 const button1 = document.getElementById('button1');
@@ -28,51 +31,49 @@ function for question area to switch to new questions.
 answer area to have function for answer selected.
 function to have score adjusted as progress.
 */
-button1.addEventListener('click', button0ne);
+button1.addEventListener('click', buttonOne);
 button2.addEventListener('click', buttonTwo);
 button3.addEventListener('click', buttonThree);
 
-function button0ne() {
-	if (renderOne) {
-		return (button1.innerText = 'Try again');
-	} else if (renderTwo) {
-		return (button1.innerText = 'Try again');
-	} else renderThree;
-	return (
-		(button1.innerText = 'Correct!!!'),
+function buttonOne() {
+	if (round === 1) {
+		button1.innerText = 'Try again!';
+	} else if (round === 2) {
+		button1.innerText = 'Try again!';
+	} else {
+		button1.innerText = 'Correct!!!';
 		alert(
 			'"You have chosen wisely! You shall cross thy bridge with permission!"'
-		),
-		(scoreEl.innerText = 'Score: 3/3'),
-		init()
-	);
+		);
+		scoreEl.innerText = 'Score: 3/3';
+		init();
+	}
 }
 
 function buttonTwo() {
-	if (renderOne) {
-		return (button2.innerText = 'Try again!');
-	} else if (renderTwo) {
-		return (
-			(button2.innerText = 'Correct!!!'),
-			alert(
-				'"You got the 2nd riddle! You must one get the last if you wish to pass!"'
-			) + renderThree()
+	if (round === 1) {
+		button2.innerText = 'Try again!';
+	} else if (round === 2) {
+		button2.innerText = 'Correct!!!';
+		alert(
+			'"You got the 2nd riddle! You must get the last if you wish to pass!"'
 		);
-	} else renderThree;
-	return (button2.innerText = 'Try again!');
+		renderThree();
+	} else {
+		button2.innerText = 'Try again!';
+	}
 }
 
 function buttonThree() {
-	if (renderOne) {
-		return (
-			(button3.innerText = 'Correct!!!'),
-			alert('"You got the 1st riddle! but you must answer thrice!"') +
-				renderTwo()
-		);
-	} else if (renderTwo) {
-		return (button3.innerText = 'Try again!');
-	} else renderThree;
-	return (button3.innerText = 'Try again!');
+	if (round === 1) {
+		button3.innerText = 'Correct!!!';
+		alert('"You got the 1st riddle! but you must answer thrice!"');
+		renderTwo();
+	} else if (round === 2) {
+		button3.innerText = 'Try again!';
+	} else {
+		button3.innerText = 'Try again!';
+	}
 }
 
 function renderOne() {
@@ -81,6 +82,7 @@ function renderOne() {
 	button2.innerText = '2. a fork';
 	button3.innerText = '3. a coin';
 	scoreEl.innerText = 'Score: 0/3';
+	round = 1;
 }
 
 /*button1.addEventListener('click', function () {
@@ -102,6 +104,7 @@ function renderTwo() {
 	button2.innerText = '2. an egg';
 	button3.innerText = '3. a dragon';
 	scoreEl.innerText = 'Score: 1/3';
+	round = 2;
 }
 /*button1.addEventListener('click', function () {
 		button1.innerText = 'Try again!';
@@ -125,6 +128,7 @@ function renderThree() {
 	button2.innerText = '2. an ork';
 	button3.innerText = '3. an umbrella';
 	scoreEl.innerText = 'Score: 2/3';
+	round = 3;
 }
 /*button2.addEventListener('click', function () {
 		button2.innerText = 'Try again!';
