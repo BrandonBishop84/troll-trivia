@@ -1,6 +1,7 @@
 # troll-trivia
 <img width="926" alt="Screen Shot 2022-09-12 at 5 04 22 PM" src="https://user-images.githubusercontent.com/111710602/189781238-00fd011a-9d9c-4b50-afd6-55b7a20474b7.png">
 
+
 \*Project Description
 
 I want to make a trivia game with riddles as the questions. I am going to have 3 levels. I want to make it troll bridge themed like you have to answer the troll's riddles to get across the bridge.
