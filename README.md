@@ -1,4 +1,5 @@
 # troll-trivia
+<img width="926" alt="Screen Shot 2022-09-12 at 5 04 22 PM" src="https://user-images.githubusercontent.com/111710602/189781238-00fd011a-9d9c-4b50-afd6-55b7a20474b7.png">
 
 \*Project Description
 
@@ -23,3 +24,7 @@ I want to make a trivia game with riddles as the questions. I am going to have 3
 -Make player show progress by moving across bridge.
 -Have troll have reactions to players answers.
 -Make 3 levels of the game each gets more challenging.
+
+
+*Wireframe
+![53CE76D6-4991-4C6B-8B5E-FAA5845B842A_1_105_c](https://user-images.githubusercontent.com/111710602/189781279-4b46844f-c504-41db-a550-34b0fb5ffb96.jpeg)
