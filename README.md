@@ -10,7 +10,7 @@ javascript
 
 \*Installation Instructions
 
-Open game in browser and try to answer the riddles in the multiple choice boxes.
+You can clone down this repository and open the index.html in your browser and try to answer the riddles in the multiple choice boxes.
 
 \*Project Description
 
